@@ -1,0 +1,55 @@
+.idea/
+
+# Cache, session files and logs (Symfony3)
+/symfony/var/cache/*
+/symfony/var/logs/*
+/symfony/var/sessions/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+!var/sessions/.gitkeep
+
+# Parameters
+/symfony/app/config/parameters.yml
+/symfony/app/config/parameters.ini
+/symfony/app/config/saml/*
+!app/config/saml/.gitkeep
+
+# Managed by Composer
+/symfony/app/bootstrap.php.cache
+/symfony/var/bootstrap.php.cache
+/symfony/bin/*
+!bin/console
+!bin/symfony_requirements
+
+# Assets and user uploads
+/symfony/web/bundles/
+/symfony/web/css/compiled/
+/symfony/web/js/compiled/
+/symfony/web/uploads/
+
+# PHPUnit
+/symfony/app/phpunit.xml
+/symfony/phpunit.xml
+/symfony/phpunit-5.7/
+.5.7.md5
+5.7.zip
+
+# Build data
+/symfony/build/
+
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+# Embedded web-server pid file
+/.web-server-pid
+
+# Docker specific files
+/.env
+.data/
+logs/
+
+/symfony/vendor/
+
+/symfony/coverage/
+
+*.mmdb
