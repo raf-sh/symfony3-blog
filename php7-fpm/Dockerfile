@@ -31,4 +31,12 @@ RUN echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-x
 RUN echo 'alias sf="php app/console"' >> ~/.bashrc
 RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
 
+#symfony related
+RUN sf3 fos:user:create admin test@example.com 123
+RUN sf3 fos:user:promote admin ROLE_ADMIN
+RUN sf3 ckeditor:install
+
+
+RUN sf3 assets:install web
+
 WORKDIR /var/www/symfony
